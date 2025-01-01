@@ -30,8 +30,8 @@ for col in df.columns:
 %matplotlib inline
 sns.histplot(df.msrp[df.msrp < 100000], bins=50) #shows long tail, transform to normal distribution with log
 price_logs = np.log1p(df.msrp)
-sns.histplot(price_logs, bins=50)
-df.isnull().sum()
+#sns.histplot(price_logs, bins=50)
+print(df.isnull().sum())
 
 #%% Setting up the validation framework
 
@@ -91,7 +91,6 @@ X = [
 ]
 
 X = np.array(X)
-X
 
 #%% train linear regression
 
